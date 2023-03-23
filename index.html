@@ -1,82 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        background-image: url(./bg.png);
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture the Flag</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<style>
+    /* 设置背景图片 */
+    body {
+        background-image: url("bg.png");
         background-size: cover;
-      }
-      main {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      code {
-        padding: 16px;
-        overflow: auto;
-        font-size: 85%;
-        line-height: 1.45;
-        background-color: #847f7fb0;
-        border-radius: 6px;
-        display: block;
-        color: #fff;
-      }
+    }
+    .navbar .navbar-nav .nav-link {
+        color: black;
+    }
 
-      p:last-child {
-        font-size: 14px;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>Welcome to Capture the flag!</h1>
-      <p>
-        In this game, you compete with others to solve challenges and find
-        hidden flags. The game will be played entirely in the terminal, so be
-        prepared to use your coding skills. Here's how to get started:
-      </p>
-      <h4>
-        Step 1: Make sure you have these tools on your computer, we've
-        downloaded them for you
-      </h4>
-      <ul>
-        <li>
-          Terminal emulator (such as terminal on Mac or command prompt on
-          Windows)
-        </li>
-        <li>Python 3.x</li>
-        <li>Git</li>
-      </ul>
-      <p>
-        If you find that your computer does not have these tools, please call
-        the teacher.
-      </p>
-      <h4>
-        Step 2: Clone repository Game challenges and tokens are stored in Git
-        repositories. First, clone the repository to the local machine using the
-        following command:
-      </h4>
-      <code>git clone [repository URL]</code>
-      <p>
-        Replace [repository URL] with the URL of the repository provided by the
-        game administrator. Once you've cloned the repository, you're ready to
-        play.
-      </p>
-      <h4>Step 3: Solve the challenge.</h4>
-      <p>
-        This flag will be a file in the Linux file system that you must find,
-        and grant read permission to. Once the file has been read, the CTF will
-        be considered complete. A cheat sheet and instruction sheet will be
-        provided.
-      </p>
-      <h4>
-        Are you ready? Join the game and feel the charm of computer science!
-      </h4>
-      <p>Attention! You only have 11 minutes.</p>
-    </main>
-  </body>
+    .navbar .navbar-nav .nav-link:hover {
+        color: darkblue;
+    }
+
+    .navbar .navbar-nav .nav-link-text {
+        color: black;
+    }
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-nav > a {
+        margin: 0 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .word {
+        font-size: 16px;
+        line-height: 2.2;
+    }
+    .l {
+        padding-left: 40px;
+        text-align: center;
+    }
+
+</style>
+
+<body>
+<main class="container py-5">
+    <h1 class="text-center">Welcome to Capture the Flag!</h1>
+
+    <div class="mt-5">
+            <form class="d-flex justify-content-left">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 400px; padding-bottom: inherit">
+            </form>
+
+    </div>
+
+            <div class="l">
+                <a class="nav-link" href="#">Link1  |    Link2  |   Link3   |    Link4</a>
+            </div>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <img src="1.jpg" alt="Image" width="500" height="250">
+    </div>
+    <br>
+    <div class="d-flex">
+        <div class="flex-grow-0" style="width:30%; padding-right: 40px;">
+            <div class="row">
+                <h4 class="text-center">Introduction</h4>
+                <div class="col-sm">
+                    <p class="w-100 word">
+                        We will have a simple Capture the Flag (CTF) activity for you to complete.
+                        You will have a terminal line where you have to find the flag in Linux machine.
+                    </p>
+                    <p class="w-100 word">
+                        The flag will be a file in the Linux file system that you must find and allow to be read.
+                        Once that file has been read, the CTF will be considered complete. A cheat sheet and instructions file will be provided.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container flex-grow-1" style="width:65%">
+            <div class="row">
+                <div class="col-sm">
+                    <h4 class="mb-4 text-center">Step 1</h4>
+
+                    <p>Make sure you have these tools on your computer, Here's how to get started:</p>
+                    <ul class="list-styled">
+                        <li>Terminal emulator (such as terminal on Mac or command prompt on Windows)</li>
+                        <li>Python 3.x</li>
+                        <li>Git</li>
+                    </ul>
+                    <p>If you find that your computer does not have these tools, please call the teacher.</p>
+                </div>
+
+                <div class="col-sm">
+                    <h4 class="mb-4 text-center">Step 2</h4>
+                    <p>Game challenges and tokens are stored in Git repositories. First, clone the repository to the local machine using the following command:</p>
+                    <code class="d-block my-4">git clone [repository URL]</code>
+                    <p>Replace [repository URL] with the URL of the repository provided by the game administrator. Once you've cloned the repository, you're ready to play.</p>
+
+                </div>
+                <div class="col-sm ">
+                    <h4 class="mb-4 text-center">Step 3</h4>
+                    <p class="word">This flag will be a file in the Linux file system that you must find, and grant read permission to.
+                        Once the file has been read, the CTF will be considered complete.
+                        A cheat sheet and instruction sheet will be provided.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5">
+        <h4 class="text-center">Are you ready? Join the game and feel the charm of computer science!</h4>
+        <p class="text-center">Attention! You only have 11 minutes.</p>
+    </div>
+</main>
+</body>
 </html>
