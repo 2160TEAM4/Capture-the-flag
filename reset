@@ -1,0 +1,3 @@
+#!/bin/bash
+chmod u= 3/fish/sheep/theflag.txt
+echo The CTF game has been reset
